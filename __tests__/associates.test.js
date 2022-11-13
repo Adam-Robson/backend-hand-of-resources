@@ -33,6 +33,13 @@ describe('associates route', () => {
     expect(res.body).toMatchObject({ newAssociate });
   });
 
+  test('PUT /associates/1 update associate with id #1', async () => {
+    const res = await request(app).put('/associates/1').send({ gender: 'Female' });
+    expect(res.statusCode).toBe(200);
+    expect(res.body.gender).toBe('Female');
+  });
+
+
   afterAll(() => {
     return setup(pool);
   });
