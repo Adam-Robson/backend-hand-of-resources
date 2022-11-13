@@ -1,8 +1,8 @@
 -- Use this file to define your SQL tables
 -- The SQL in this file will be executed when you run `npm run setup-db`
-DROP TABLE people IF EXISTS CASCADE;
+DROP TABLE associates IF EXISTS CASCADE;
 
-CREATE TABLE people (
+CREATE TABLE associates (
   id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   FIRST_NAME VARCHAR NOT NULL,
   LAST_NAME VARCHAR NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE people (
   IP_ADDRESS VARCHAR NOT NULL,
   );
 
-  INSERT INTO people (
+  INSERT INTO associates (
   FIRST_NAME, LAST_NAME, EMAIL_ADDRESS, GENDER, IP_ADDRESS)
   VALUES
   ('Cissiee', 'Guilloneau', 'cguilloneau0@nydailynews.com',	'Female',	'221.97.206.117'),
