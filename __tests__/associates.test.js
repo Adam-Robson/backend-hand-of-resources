@@ -8,18 +8,6 @@ describe('associates route', () => {
     return setup(pool);
   });
 
-  test('POST /associates creates new associate in the database', async () => {
-    const newAssociate = {
-      first_name: 'John',
-      last_name: 'Smith',
-      email_address: 'john@smith.com',
-      gender: 'male',
-      ip_address: '127.999.133.01'
-    };
-    const res = await request(app).post('/associates').send(newAssociate);
-    expect(res.statusCode).toBe(200);
-  });
-
   test('GET /associates/:id route to return an associate detail', async () => {
     const res = await request(app).get('/associates');
     const singleRow = await res.body.find((person) => person.id = '1');
@@ -30,6 +18,19 @@ describe('associates route', () => {
     const res = await request(app).get('/associates');
     expect(res.body.length).toEqual(15);
     expect(res.statusCode).toEqual(200);
+  });
+
+  test('POST /associates creates new associate in the database', async () => {
+    const newAssociate = {
+      first_name: 'John',
+      last_name: 'Smith',
+      email_address: 'john@smith.com',
+      gender: 'male',
+      ip_address: '127.999.133.01'
+    };
+    const res = await request(app).post('/associates').send(newAssociate);
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toMatchObject({ newAssociate });
   });
 
   afterAll(() => {
