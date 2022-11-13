@@ -10,10 +10,8 @@ describe('associates route', () => {
 
   test('GET /associates/:id route to return an associate detail', async () => {
     const res = await request(app).get('/associates');
-    const individual = await res.body.find((person) => person.id === '3');
-    expect(individual).toHaveProperty('id', '3');
-    expect(individual).toHaveProperty('name', 'Ralph Ellison');
-    expect(individual).toMatchObject({ individual });
+    const singleRow = await res.body.find((person) => person.id = '1');
+    expect(singleRow).toMatchObject({ first_name: 'Cissiee', last_name: 'Guilloneau' });
   });
 
   test('GET /associates route to return all associates', async () => {
