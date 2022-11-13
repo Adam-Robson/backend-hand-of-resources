@@ -10,12 +10,12 @@ describe('associates route', () => {
 
   test('GET /associates route to return all associates', async () => {
     const res = await request(app).get('/associates');
-    expect(res.body.length).to.equal(15);
-    expect(res.statusCode).to.equal(200);
+    expect(res.body.length).toEqual(15);
+    expect(res.statusCode).toEqual(200);
   });
 
   afterAll(() => {
     return setup(pool);
   });
-  
+
 });
