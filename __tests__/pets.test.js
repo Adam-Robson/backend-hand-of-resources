@@ -22,12 +22,33 @@ describe('pets routes', () => {
       last_name: 'Coorington',
       kind: 'dog',
       variety: 'cocker-spanial',
-      nickname: 'Bubble'
+      nickname: 'Bubble',
     });
+  });
+
+  test('POST /pets creates new pet in the database', async () => {
+    const newPet = {
+      first_name: 'Rick',
+      last_name: 'Somadd',
+      kind: 'turtle',
+      variety: 'patagoniaemys',
+      nickname: 'grump',
+    };
+    const res = await request(app).post('/pets').send(newPet);
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toMatchInlineSnapshot(`
+      Object {
+        "first_name": "Rick",
+        "id": 6,
+        "kind": "turtle",
+        "last_name": "Somadd",
+        "nickname": "grump",
+        "variety": "patagoniaemys",
+      }
+    `);
   });
 
   afterAll(() => {
     return setup(pool);
   });
-
 });
