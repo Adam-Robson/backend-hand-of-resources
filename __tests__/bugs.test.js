@@ -15,6 +15,15 @@ describe('bugs route', () => {
   });
 
 
+  test('GET /bugs/:id route to return an bug detail', async () => {
+    const res = await request(app).get('/bugs');
+    const singleBug = await res.body.find((bug) => (bug.id = '1'));
+    expect(singleBug).toMatchObject({
+      first_name: 'Benjamin',
+      last_name: 'Pallet',
+    });
+  });
+
   afterAll(() => {
     return setup(pool);
   });
