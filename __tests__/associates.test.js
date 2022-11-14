@@ -38,7 +38,7 @@ describe('associates route', () => {
         "email_address": "john@smith.com",
         "first_name": "John",
         "gender": "Male",
-        "id": 141,
+        "id": 16,
         "ip_address": "127.999.133",
         "last_name": "Smith",
       }

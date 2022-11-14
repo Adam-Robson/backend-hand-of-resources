@@ -39,7 +39,7 @@ describe('pets routes', () => {
     expect(res.body).toMatchInlineSnapshot(`
       Object {
         "first_name": "Rick",
-        "id": 131,
+        "id": 6,
         "kind": "turtle",
         "last_name": "Somadd",
         "nickname": "grump",

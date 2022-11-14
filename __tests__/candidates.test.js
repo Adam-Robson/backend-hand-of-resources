@@ -42,7 +42,7 @@ describe('candidates routes', () => {
         "email_address": "tyrinna@swoon.me",
         "first_name": "Tyrinna",
         "gender": "Bigender",
-        "id": 136,
+        "id": 11,
         "last_name": "Swoon",
       }
     `);
