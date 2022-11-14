@@ -58,6 +58,15 @@ describe('newbies routes', () => {
     `);
   });
 
+  test('PUT /newbies/:id update newbie with id 1', async () => {
+    const res = await request(app)
+      .put('/newbies/1')
+      .send({ email_address: 'thesandwich@devine.com' });
+    expect(res.statusCode).toBe(200);
+    expect(res.body.email_address).toBe('thesandwich@devine.com');
+  });
+
+
   afterAll(() => {
     return setup(pool);
   });
