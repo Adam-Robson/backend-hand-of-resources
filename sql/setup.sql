@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS associates CASCADE;
 DROP TABLE IF EXISTS candidates CASCADE;
+DROP TABLE IF EXISTS pets CASCADE;
 
 CREATE TABLE associates (
   id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -17,6 +18,15 @@ CREATE TABLE candidates (
   EMAIL_ADDRESS VARCHAR NOT NULL,
   GENDER VARCHAR NOT NULL,
   DOB INT8 NOT NULL
+  );
+
+CREATE TABLE pets (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  FIRST_NAME VARCHAR NOT NULL,
+  LAST_NAME VARCHAR NOT NULL,
+  KIND VARCHAR NOT NULL,
+  VERSION VARCHAR NOT NULL,
+  NICKNAME VARCHAR NOT NULL
   );
 
   INSERT INTO associates (
@@ -51,3 +61,11 @@ INSERT INTO candidates (
 ('Ileana',	'Deniskevich',	'ideniskevichm@ihg.com',	'Female', '19550412'),
 ('Corella',	'Ambrosi',	'cambrosin@free.fr',	'Bigender', '19880630'),
 ('Urbano',	'O&apos;Reagan',	'uoreagano@phoca.cz',	'Confused & OK with that', '19841016');
+
+INSERT INTO pets (
+FIRST_NAME, LAST_NAME, KIND, VARIETY, NICKNAME)
+VALUES
+('Viviana',	'Coorington', 'dog', 'cocker-spanial', 'Bubble'),
+('Florenza',	'Gehrts', 'cat', 'ragdoll', 'Lori'),
+('Kassia',	'Philipeau', 'gerbil', 'psammomys', 'Chirp'),('Mayer',	'Fitzsymons', 'goldfish', 'shubunkin', 'jeffe'),
+('Jyoti',	'Doyley', 'ferret', 'siamese', 'yota');

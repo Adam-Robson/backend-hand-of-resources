@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles.css" rel="stylesheet" />
+    <title>Hand of Resources</title>
+</head>
+<body>
+    <header id="header">
+        <h1 id="title">Hand of Resources</h1>
+    </header>
+    <main>
+        <table>
+            <tr>
+              <th>Route</th>
+              <th>Method</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td>/associates</td>
+              <td>GET</td>
+              <td>Returns a list of Associates</td>
+              <td><a href="/associates">Associates</a></td>
+            </tr>
+            <tr>
+              <td>/associates/:id</td>
+              <td>GET</td>
+              <td>Returns an individual Associate</td>
+              <td><a href="/associates/1">Associate No. 1</a></td>
+            </tr>
+            <tr>
+              <td>/associates</td>
+              <td>POST</td>
+              <td>Inserts Associate(s) into database table</td>
+              <td>Insert new <a href="/associates">Associate</a></td>
+            </tr>
+            <tr>
+              <td>/associates/:id</td>
+              <td>UPDATE</td>
+              <td>Updates an Associate(s) detail in database table</td>
+              <td>Update<a href="/associates/1">Associate</a> No. 1</td>
+            </tr>
+            <tr>
+              <td>/associates/:id</td>
+              <td>DELETE</td>
+              <td>Deletes an Associate from the database table</td>
+              <td>Delete<a href="/associates/1"> Associate</a> No. 1</td>
+            </tr>
+            <tr>
+              <td>/candidates</td>
+              <td>GET</td>
+              <td>Returns a list of Candidates</td>
+              <td><a href="/candidates">Candidates</a></td>
+            </tr>
+            <tr>
+              <td>/candidates/:id</td>
+              <td>GET</td>
+              <td>Returns an individual Candidate</td>
+              <td><a href="/candidates/3">Candidate No. 3</a></td>
+            </tr>
+            <tr>
+              <td>/candidates</td>
+              <td>POST</td>
+              <td>Inserts Candidate(s) into database table</td>
+              <td>Insert new <a href="/candidates">Candidate</a></td>
+            </tr>
+            <tr>
+              <td>/candidates/:id</td>
+              <td>UPDATE</td>
+              <td>Updates an Candidate(s) detail in database table</td>
+              <td>Update<a href="/candidates/3">Candidate</a> No. 3</td>
+            </tr>
+            <tr>
+              <td>/candidates/:id</td>
+              <td>DELETE</td>
+              <td>Deletes an Candidate from the database table</td>
+              <td>Delete<a href="/candidates/3"> Candidate</a> No. 3</td>
+            </tr>
+        </table>
+    </main>
+</body>
+<footer id="footer">
+  2022, <a id="alchemy" href="https://www.alchemycodelab.com/">Alchemy</a> Student Software Developer
+</footer>
+</html>
