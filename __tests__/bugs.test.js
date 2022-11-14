@@ -43,6 +43,22 @@ describe('bugs route', () => {
     `);
   });
 
+  test('PUT /bugs/:id update bug with id', async () => {
+    const res = await request(app)
+      .put('/bugs/1')
+      .send({ kind: 'Cimex lectularius' });
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toMatchInlineSnapshot(`
+      Object {
+        "age": 128,
+        "first_name": "Benjamin",
+        "id": 1,
+        "kind": "Cimex lectularius",
+        "last_name": "Pallet",
+      }
+    `);
+  });
+
   afterAll(() => {
     return setup(pool);
   });
