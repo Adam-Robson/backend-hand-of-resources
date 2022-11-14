@@ -49,11 +49,9 @@ describe('pets routes', () => {
   });
 
   test('PUT /pets/:id update pet with id 1', async () => {
-    const res = await request(app)
-      .put('/pets/1')
-      .send({ kind: 'canine' });
+    const res = await request(app).put('/pets/1').send({ kind: 'canine' });
     expect(res.statusCode).toBe(200);
-    expect(res.body.kind).toBe('canine');
+    expect(res.body.kind).toMatch('canine');
   });
 
   test('DELETE /pets/:id delete pet with id', async () => {
