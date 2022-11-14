@@ -56,6 +56,11 @@ describe('candidates routes', () => {
     expect(res.body.email_address).toBe('thebomb@dotcom.com');
   });
 
+  test('DELETE /candidates/:id delete candidate with id', async () => {
+    const res = await request(app).delete('/candidates/1');
+    expect(res.statusCode).toMatchInlineSnapshot('200');
+  });
+
   afterAll(() => {
     return setup(pool);
   });
