@@ -14,6 +14,18 @@ describe('candidates routes', () => {
     expect(res.statusCode).toEqual(200);
   });
 
+  test('GET /candidates/:id returns a candidate detail', async () => {
+    const res = await request(app).get('/candidates');
+    const singleRow = await res.body.find((person) => (person.id = '1'));
+    expect(singleRow).toMatchObject({
+      first_name: 'Teddy',
+      last_name: 'Officer',
+      email_address: 'tofficer@amazon.de',
+      gender: 'Female',
+      dob: '19600105'
+    });
+  });
+
   afterAll(() => {
     return setup(pool);
   });
