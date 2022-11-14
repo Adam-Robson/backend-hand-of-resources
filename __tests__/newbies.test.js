@@ -66,6 +66,10 @@ describe('newbies routes', () => {
     expect(res.body.email_address).toBe('thesandwich@devine.com');
   });
 
+  test('DELETE /newbies/:id delete newbie with id', async () => {
+    const res = await request(app).delete('/newbies/1');
+    expect(res.statusCode).toMatchInlineSnapshot('200');
+  });
 
   afterAll(() => {
     return setup(pool);
