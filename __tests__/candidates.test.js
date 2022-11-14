@@ -22,12 +22,33 @@ describe('candidates routes', () => {
       last_name: 'Officer',
       email_address: 'tofficer@amazon.de',
       gender: 'Female',
-      dob: '19600105'
+      dob: '19600105',
     });
+  });
+
+  test('POST /candidates creates new candidate in the database', async () => {
+    const newCandidate = {
+      first_name: 'Tyrinna',
+      last_name: 'Swoon',
+      email_address: 'tyrinna@swoon.me',
+      gender: 'Bigender',
+      dob: '19910713',
+    };
+    const res = await request(app).post('/candidates').send(newCandidate);
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toMatchInlineSnapshot(`
+      Object {
+        "dob": "19910713",
+        "email_address": "tyrinna@swoon.me",
+        "first_name": "Tyrinna",
+        "gender": "Bigender",
+        "id": 11,
+        "last_name": "Swoon",
+      }
+    `);
   });
 
   afterAll(() => {
     return setup(pool);
   });
-
 });
