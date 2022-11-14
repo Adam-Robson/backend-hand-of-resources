@@ -56,6 +56,11 @@ describe('pets routes', () => {
     expect(res.body.kind).toBe('canine');
   });
 
+  test('DELETE /pets/:id delete pet with id', async () => {
+    const res = await request(app).delete('/pets/1');
+    expect(res.statusCode).toMatchInlineSnapshot('200');
+  });
+
   afterAll(() => {
     return setup(pool);
   });
