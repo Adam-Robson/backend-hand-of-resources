@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS associates CASCADE;
 DROP TABLE IF EXISTS candidates CASCADE;
 DROP TABLE IF EXISTS pets CASCADE;
+DROP TABLE IF EXISTS newbies CASCADE;
 
 CREATE TABLE associates (
   id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -27,6 +28,15 @@ CREATE TABLE pets (
   KIND VARCHAR NOT NULL,
   VARIETY VARCHAR NOT NULL,
   NICKNAME VARCHAR NOT NULL
+  );
+
+CREATE TABLE newbies (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  FIRST_NAME VARCHAR NOT NULL,
+  LAST_NAME VARCHAR NOT NULL,
+  EMAIL_ADDRESS VARCHAR NOT NULL,
+  GENDER VARCHAR NOT NULL,
+  IP_ADDRESS VARCHAR NOT NULL
   );
 
   INSERT INTO associates (
@@ -69,3 +79,17 @@ VALUES
 ('Florenza',	'Gehrts', 'cat', 'ragdoll', 'Lori'),
 ('Kassia',	'Philipeau', 'gerbil', 'psammomys', 'Chirp'),('Mayer',	'Fitzsymons', 'goldfish', 'shubunkin', 'jeffe'),
 ('Jyoti',	'Doyley', 'ferret', 'siamese', 'yota');
+
+INSERT INTO newbies (
+FIRST_NAME, LAST_NAME, EMAIL_ADDRESS, GENDER, IP_ADDRESS)
+VALUES
+('Darcie','Jorden','djordeny@sakura.ne.jp','Female','80.6.214.168'),
+('Saudra','Nelligan','snelliganz@home.pl','Female','29.27.16.211'),
+('Blondy','Gligorijevic','bgligorijevic10@bloglines.com','Female','74.31.105.230'),
+('Kinny','Murrells','kmurrells11@microsoft.com','Male','212.51.131.39'),
+('Ignacius','Comben','icomben12@pagesperso-orange.fr','Polygender','69.126.250.83'),
+('Jordanna','Bassingham','jbassingham13@pbs.org','Female','235.178.173.5'),
+('Katherina','Greenslade','kgreenslade14@oracle.com','Female','108.210.6.96'), ('Ivie','Overstone','ioverstone15@bandcamp.com','Female','159.54.191.250'),
+('Giles','Shaylor','gshaylor16@mlb.com','Male','253.190.67.65'),
+('Else','Lutman','elutman17@nih.gov','Female','128.146.244.207'),
+('Herby','Ibbitt','hibbitt18@accuweather.com','Male','149.49.112.55');
