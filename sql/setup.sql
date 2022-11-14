@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS associates CASCADE;
 DROP TABLE IF EXISTS candidates CASCADE;
 DROP TABLE IF EXISTS pets CASCADE;
 DROP TABLE IF EXISTS newbies CASCADE;
-DROP TABLE IF EXISTS pests CASCADE;
+DROP TABLE IF EXISTS bugs CASCADE;
 
 CREATE TABLE associates (
   id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -40,13 +40,13 @@ CREATE TABLE newbies (
   IP_ADDRESS VARCHAR NOT NULL
   );
 
-CREATE TABLE pests {
+CREATE TABLE bugs (
   id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   FIRST_NAME VARCHAR NOT NULL,
   LAST_NAME VARCHAR NOT NULL,
   KIND VARCHAR NOT NULL,
   AGE INT4 NOT NULL,
-}
+);
 
   INSERT INTO associates (
   FIRST_NAME, LAST_NAME, EMAIL_ADDRESS, GENDER, IP_ADDRESS)
@@ -86,7 +86,8 @@ FIRST_NAME, LAST_NAME, KIND, VARIETY, NICKNAME)
 VALUES
 ('Viviana',	'Coorington', 'dog', 'cocker-spanial', 'Bubble'),
 ('Florenza',	'Gehrts', 'cat', 'ragdoll', 'Lori'),
-('Kassia',	'Philipeau', 'gerbil', 'psammomys', 'Chirp'),('Mayer',	'Fitzsymons', 'goldfish', 'shubunkin', 'jeffe'),
+('Kassia',	'Philipeau', 'gerbil', 'psammomys', 'Chirp'),
+('Mayer',	'Fitzsymons', 'goldfish', 'shubunkin', 'jeffe'),
 ('Jyoti',	'Doyley', 'ferret', 'siamese', 'yota');
 
 INSERT INTO newbies (
@@ -103,11 +104,11 @@ VALUES
 ('Else','Lutman','elutman17@nih.gov','Female','128.146.244.207'),
 ('Herby','Ibbitt','hibbitt18@accuweather.com','Male','149.49.112.55');
 
-INSERT INTO pests (
+INSERT INTO bugs (
 FIRST_NAME, LAST_NAME, KIND, AGE)
 VALUES
-('Benjamin', 'Pallet', 'Bed Bug', '128 going on 18'),
-('Kathy', 'Rochfordt', 'Cockaroach', 'a mild 22'),
-('Horace', 'Von Circles', 'House Fly', '3 days'),
-('Larry', 'Foliclesdotter', 'Lice', '12'),
-('Manny', 'Pharasitee', 'Mosquitoe', '33');
+('Benjamin', 'Pallet', 'Bed Bug', 128),
+('Kathy', 'Rochfordt', 'Cockaroach', 22),
+('Horace', 'Von Circles', 'House Fly', 3),
+('Larry', 'Foliclesdotter', 'Lice', 12),
+('Manny', 'Pharasitee', 'Mosquitoe', 33);

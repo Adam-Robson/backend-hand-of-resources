@@ -51,7 +51,7 @@ describe('newbies routes', () => {
         "email_address": "jez@ebel.ui",
         "first_name": "Jezel",
         "gender": "Polygender",
-        "id": 12,
+        "id": 137,
         "ip_address": "1119.004.79.4",
         "last_name": "Bagrooch",
       }
