@@ -16,7 +16,7 @@ describe('newbies routes', () => {
       last_name: 'Jorden',
       email_address: 'djordeny@sakura.ne.jp',
       gender: 'Female',
-      ip_address: '80.6.214.168'
+      ip_address: '80.6.214.168',
     });
     expect(singleNewbie).toMatchInlineSnapshot(`
       Object {
@@ -34,6 +34,28 @@ describe('newbies routes', () => {
     const res = await request(app).get('/newbies');
     expect(res.body.length).toEqual(11);
     expect(res.statusCode).toEqual(200);
+  });
+
+  test('POST /newbies creates new newbie in the database', async () => {
+    const newNewbie = {
+      first_name: 'Jezel',
+      last_name: 'Bagrooch',
+      email_address: 'jez@ebel.ui',
+      gender: 'Polygender',
+      ip_address: '1119.004.79.4',
+    };
+    const res = await request(app).post('/newbies').send(newNewbie);
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toMatchInlineSnapshot(`
+      Object {
+        "email_address": "jez@ebel.ui",
+        "first_name": "Jezel",
+        "gender": "Polygender",
+        "id": 12,
+        "ip_address": "1119.004.79.4",
+        "last_name": "Bagrooch",
+      }
+    `);
   });
 
   afterAll(() => {
