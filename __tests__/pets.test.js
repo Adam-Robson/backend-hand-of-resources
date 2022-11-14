@@ -16,13 +16,13 @@ describe('pets routes', () => {
 
   test('GET /pets/:id returns a pet detail', async () => {
     const res = await request(app).get('/pets');
-    const singleRow = await res.body.find((pet) => (pet.id = '4'));
+    const singleRow = await res.body.find((pet) => (pet.id = '1'));
     expect(singleRow).toMatchObject({
-      first_name: 'Mayer',
-      last_name: 'Fitzsymons',
-      kind: 'goldfish',
-      variety: 'shubunkin',
-      nickname: 'jeffe'
+      first_name: 'Viviana',
+      last_name: 'Coorington',
+      kind: 'dog',
+      variety: 'cocker-spanial',
+      nickname: 'Bubble'
     });
   });
 
