@@ -48,6 +48,14 @@ describe('candidates routes', () => {
     `);
   });
 
+  test('PUT /candidates/:id update candidate with id 1', async () => {
+    const res = await request(app)
+      .put('/candidates/1')
+      .send({ email_address: 'thebomb@dotcom.com' });
+    expect(res.statusCode).toBe(200);
+    expect(res.body.email_address).toBe('thebomb@dotcom.com');
+  });
+
   afterAll(() => {
     return setup(pool);
   });
