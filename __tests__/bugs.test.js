@@ -4,6 +4,7 @@ const request = require('supertest');
 const app = require('../lib/app');
 
 describe('bugs route', () => {
+
   beforeEach(() => {
     return setup(pool);
   });
@@ -59,7 +60,13 @@ describe('bugs route', () => {
     `);
   });
 
+  test('DELETE /bugs/:id delete bug with id', async () => {
+    const res = await request(app).delete('/bugs/1');
+    expect(res.statusCode).toMatchInlineSnapshot('200');
+  });
+
   afterAll(() => {
     return setup(pool);
   });
+  
 });
