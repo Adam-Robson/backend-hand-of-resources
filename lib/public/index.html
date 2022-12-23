@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles.css" rel="stylesheet" />
+    <title>Hand of Resources</title>
+</head>
+<body>
+    <header>
+        <h2>Hand of Resources</h2>
+    </header>
+    <main>
+        <table>
+            <tr>
+              <th>Route</th>
+              <th>Method</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td>/associates</td>
+              <td>GET</td>
+              <td>Return a list of Associates.</td>
+              <td>Click <a href="/associates">here</a> for a list of Associates.</td>
+            </tr>
+            <tr>
+              <td>/associates/:id</td>
+              <td>GET</td>
+              <td>Return an individual Associate.</td>
+              <td>Associate <a href="/associates/1">No. 1</a>.</td>
+            </tr>
+            <tr>
+              <td>/associates</td>
+              <td>POST</td>
+              <td>Insert Associate(s) into database.</td>
+              <td>Insert new <a href="/associates">Associate</a>.</td>
+            </tr>
+            <tr>
+              <td>/associates/:id</td>
+              <td>UPDATE</td>
+              <td>Update existing Associate(s) in database.</td>
+              <td>Update Associate <a href="/associates/1">No. 1</a>.</td>
+            </tr>
+            <tr>
+              <td>/associates/:id</td>
+              <td>DELETE</td>
+              <td>Delete Associate(s) from database.</td>
+              <td>Delete Associate <a href="/associates/1">No. 1</a>.</td>
+            </tr>
+            <tr>
+              <td>/candidates</td>
+              <td>GET</td>
+              <td>Return a list of candidates.</td>
+              <td>Click <a href="/candidates">here</a> for a list of candidates.</td>
+            </tr>
+            <tr>
+              <td>/candidates/:id</td>
+              <td>GET</td>
+              <td>Return individual Candidate.</td>
+              <td>Candidate <a href="/candidates/1">No. 1</a>.</td>
+            </tr>
+            <tr>
+              <td>/candidates</td>
+              <td>POST</td>
+              <td>Insert Candidate(s) into database.</td>
+              <td>Insert new <a href="/candidates">Candidate</a>.</td>
+            </tr>
+            <tr>
+              <td>/candidates/:id</td>
+              <td>UPDATE</td>
+              <td>Update Candidate(s) in database.</td>
+              <td>Update Candidate <a href="/candidates/1">No. 1</a>.</td>
+            </tr>
+            <tr>
+              <td>/candidates/:id</td>
+              <td>DELETE</td>
+              <td>Delete Candidate(s) from database.</td>
+              <td>Delete Candidate <a href="/candidates/1">No. 1</a>.</td>
+            </tr>
+            <tr>
+              <td>/pets</td>
+              <td>GET</td>
+              <td>Return a list of pets.</td>
+              <td>Click <a href="/pets">here</a> for a pet list.</td>
+            </tr>
+            <tr>
+              <td>/pets/:id</td>
+              <td>GET</td>
+              <td>Return individual Pet.</td>
+              <td>Pet <a href="/pets/1">No. 1</a>.</td>
+            </tr>
+            <tr>
+              <td>/pets</td>
+              <td>POST</td>
+              <td>Insert Pet(s) into database.</td>
+              <td>Insert new <a href="/pets">Pet</a>.</td>
+            </tr>
+            <tr>
+              <td>/pets/:id</td>
+              <td>UPDATE</td>
+              <td>Update Pet(s) in database.</td>
+              <td>Update Pet <a href="/pets/1">No. 1</a>.</td>
+            </tr>
+            <tr>
+              <td>/pets/:id</td>
+              <td>DELETE</td>
+              <td>Delete Pet(s) from database.</td>
+              <td>Delete Pet <a href="/pets/1">No. 1</a>.</td>
+            </tr>
+
+            <tr>
+              <td>/newbies</td>
+              <td>GET</td>
+              <td>Return a list of Newbies.</td>
+              <td>Click <a href="/newbies">here</a> for a list of Newbies.</td>
+            </tr>
+            <tr>
+              <td>/newbies/:id</td>
+              <td>GET</td>
+              <td>Return individual Newbie.</td>
+              <td>Newbie <a href="/newbies/1">No. 1</a>.</td>
+            </tr>
+            <tr>
+              <td>/newbies</td>
+              <td>POST</td>
+              <td>Insert Newbie(s) into database.</td>
+              <td>Insert <a href="/newbies">Newbie</a>.</td>
+            </tr>
+            <tr>
+              <td>/newbies/:id</td>
+              <td>UPDATE</td>
+              <td>Update Newbie(s) in database.</td>
+              <td>Update Newbie <a href="/newbies/1">No. 1</a>.</td>
+            </tr>
+            <tr>
+              <td>/newbies/:id</td>
+              <td>DELETE</td>
+              <td>Delete Newbie(s) from database.</td>
+              <td>Delete Newbie <a href="/newbies/1">No. 1</a>.</td>
+            </tr>
+            <tr>
+              <td>/bugs</td>
+              <td>GET</td>
+              <td>Return a list of Bugs.</td>
+              <td>Click <a href="/bugs">here</a> for bug list.</td>
+            </tr>
+            <tr>
+              <td>/bugs/:id</td>
+              <td>GET</td>
+              <td>Return an individual Bug.</td>
+              <td>Bug <a href="/bugs/1">No. 1</a>.</td>
+            </tr>
+            <tr>
+              <td>/bugs</td>
+              <td>POST</td>
+              <td>Insert Bug(s) into database.</td>
+              <td>Insert new <a href="/bugs">Bug</a>.</td>
+            </tr>
+            <tr>
+              <td>/bugs/:id</td>
+              <td>UPDATE</td>
+              <td>Update Bug(s) in database.</td>
+              <td>Update Bug <a href="/bugs/1">No. 1</a>.</td>
+            </tr>
+            <tr>
+              <td>/bugs/:id</td>
+              <td>DELETE</td>
+              <td>Delete Bug(s) from database.</td>
+              <td>Delete Bug <a href="/bugs/1">No. 1</a>.</td>
+            </tr>
+        </table>
+    </main>
+</body>
+<footer id="footer">
+  2022, <a id="alchemy" href="https://www.alchemycodelab.com/">Alchemy</a> Student Software Developer
+</footer>
+</html>
